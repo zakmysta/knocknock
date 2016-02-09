@@ -1,9 +1,9 @@
-# knock
-[![Gem Version](https://badge.fury.io/rb/knock.svg)](http://badge.fury.io/rb/knock)
-[![Build Status](https://travis-ci.org/nsarno/knock.svg)](https://travis-ci.org/nsarno/knock)
-[![Test Coverage](https://codeclimate.com/github/nsarno/knock/badges/coverage.svg)](https://codeclimate.com/github/nsarno/knock/coverage)
-[![Code Climate](https://codeclimate.com/github/nsarno/knock/badges/gpa.svg)](https://codeclimate.com/github/nsarno/knock)
-[![Dependency Status](https://gemnasium.com/nsarno/knock.svg)](https://gemnasium.com/nsarno/knock)
+# knocknock
+[![Gem Version](https://badge.fury.io/rb/knocknock.svg)](https://badge.fury.io/rb/knocknock)
+[![Build Status](https://travis-ci.org/zakmysta/knocknock.svg?branch=master)](https://travis-ci.org/zakmysta/knocknock)
+[![Test Coverage](https://codeclimate.com/github/zakmysta/knocknock/badges/coverage.svg)](https://codeclimate.com/github/zakmysta/knocknock/coverage)
+[![Code Climate](https://codeclimate.com/github/zakmysta/knocknock/badges/gpa.svg)](https://codeclimate.com/github/zakmysta/knocknock)
+[![Dependency Status](https://gemnasium.com/zakmysta/knocknock.svg)](https://gemnasium.com/zakmysta/knocknock)
 
 Seamless JWT authentication for Rails API
 

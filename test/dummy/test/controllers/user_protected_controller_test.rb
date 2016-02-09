@@ -3,7 +3,7 @@ require 'test_helper'
 class UserProtectedControllerTest < ActionController::TestCase
   def valid_auth
     @user = users(:one)
-    @token = Knock::AuthToken.new(payload: { sub: @user.id }).token
+    @token = Knocknock::AuthToken.new(payload: { sub: @user.access_tokens.create.token }).token
     @request.env['HTTP_AUTHORIZATION'] = "Bearer #{@token}"
   end
 
@@ -13,7 +13,7 @@ class UserProtectedControllerTest < ActionController::TestCase
   end
 
   def invalid_resource_auth
-    @token = Knock::AuthToken.new(payload: { sub: 0 }).token
+    @token = Knocknock::AuthToken.new(payload: { sub: 0 }).token
     @request.env['HTTP_AUTHORIZATION'] = "Bearer #{@token}"
   end
 

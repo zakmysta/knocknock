@@ -25,14 +25,14 @@ end
 # Make sure knock global configuration is reset before every tests
 # to avoid order dependent failures.
 class ActiveSupport::TestCase
-  setup :reset_knock_configuration
+  setup :reset_knocknock_configuration
 
   private
 
-  def reset_knock_configuration
-    Knock.token_signature_algorithm = 'HS256'
-    Knock.token_secret_signature_key = -> { Rails.application.secrets.secret_key_base }
-    Knock.token_public_key = nil
-    Knock.token_audience = nil
+  def reset_knocknock_configuration
+    Knocknock.token_signature_algorithm = 'HS256'
+    Knocknock.token_secret_signature_key = -> { Rails.application.secrets.secret_key_base }
+    Knocknock.token_public_key = nil
+    Knocknock.token_audience = nil
   end
 end

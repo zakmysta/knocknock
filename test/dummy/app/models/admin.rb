@@ -1,4 +1,5 @@
-class Admin < ActiveRecord::Base
-  has_secure_password
+class Admin < ApplicationRecord
+  has_many :access_tokens, as: :authenticatee
 
+  has_secure_password
 end

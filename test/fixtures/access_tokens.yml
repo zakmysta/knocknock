@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  token: MyString
+  authenticatee: 
+  authenticatee_type: Authenticatee
+
+two:
+  token: MyString
+  authenticatee: 
+  authenticatee_type: Authenticatee

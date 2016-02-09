@@ -1,7 +1,5 @@
-class User < ActiveRecord::Base
+class User < ApplicationRecord
+  has_many :access_tokens, as: :authenticatee
+  
   has_secure_password
-
-  def self.find_with_payload payload
-    self.find payload['sub']
-  end
 end

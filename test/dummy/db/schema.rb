@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150922015152) do
+ActiveRecord::Schema.define(version: 20160218200351) do
+
+  create_table "access_tokens", force: :cascade do |t|
+    t.string   "token"
+    t.string   "authenticatee_type"
+    t.integer  "authenticatee_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.index ["authenticatee_type", "authenticatee_id"], name: "index_access_tokens_on_authenticatee_type_and_authenticatee_id"
+    t.index ["token"], name: "index_access_tokens_on_token"
+  end
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",           null: false

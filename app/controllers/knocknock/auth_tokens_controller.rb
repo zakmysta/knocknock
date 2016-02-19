@@ -21,7 +21,7 @@ module Knocknock
 
     def authenticate_resource
       token = request.headers['Authorization'].split(' ').last
-      @access_token = Knock::AuthToken.new(token: token).access_token
+      @access_token = Knocknock::AuthToken.new(token: token).access_token
     rescue
       head :unauthorized
     end

@@ -22,7 +22,7 @@ if ActiveSupport::TestCase.respond_to?(:fixture_path=)
   ActiveSupport::TestCase.fixtures :all
 end
 
-# Make sure knock global configuration is reset before every tests
+# Make sure knocknock global configuration is reset before every tests
 # to avoid order dependent failures.
 class ActiveSupport::TestCase
   setup :reset_knocknock_configuration

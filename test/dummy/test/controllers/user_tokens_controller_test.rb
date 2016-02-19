@@ -2,6 +2,7 @@ require 'test_helper'
 
 class UserTokensControllerTest < ActionController::TestCase
   def setup
+    request.accept = 'application/json'
     @user = users(:one)
   end
 
@@ -16,7 +17,7 @@ class UserTokensControllerTest < ActionController::TestCase
   end
 
   test "responds with 201" do
-    post :create, params: { auth: { email: @user.email, password: 'secret' } }
+    post :create, params: { auth: { email: @user.email, password: 'password' } }
     assert_response :created
     assert JSON.parse(response.body).keys.include?('jwt')
   end

@@ -48,7 +48,7 @@ module Knocknock
     end
 
     def resource_name
-      self.class.name.split('TokensController').first
+      self.class.name.demodulize.split('TokensController').first
     end
   end
 end

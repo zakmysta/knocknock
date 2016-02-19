@@ -26,8 +26,8 @@ module Knocknock
                           authenticatee_type: resource_class.to_s).authenticatee
     end
 
-    def to_json
-      { jwt: @token }.to_json
+    def as_json(options={})
+      { jwt: @token }
     end
 
   private

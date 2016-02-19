@@ -4,6 +4,7 @@ module Knocknock
     before_action :authenticate_resource, only: :destroy
 
     def create
+      # render json: { jwt: auth_token.token }, status: :created
       render json: auth_token, status: :created
     end
 

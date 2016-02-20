@@ -4,7 +4,6 @@ module Knocknock
     before_action :authenticate_resource, only: :destroy
 
     def create
-      # render json: { jwt: auth_token.token }, status: :created
       render json: auth_token, status: :created
     end
 
@@ -22,8 +21,8 @@ module Knocknock
 
     def authenticate_resource
       token = request.headers['Authorization'].split(' ').last
-      @access_token = Knocknock::AuthToken.new(token: token).token
-      head :not_found if @access_token.nil?
+      @access_token = Knocknock::AuthToken.new(token: token).access_token
+      head :unauthorized if @access_token.nil?
     rescue
       head :unauthorized
     end

@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.authors     = ['Zaki Khan']
   s.email       = ['zakmysta@gmail.com']
   s.homepage    = 'https://github.com/zakmysta/knocknock'
-  s.summary     = 'Seamless JWT authentication for Rails API.'
+  s.summary     = 'Seamless multi-model, multi-client JWT authentication for Rails API'
   s.description = 'Authentication solution for Rails based on JWT'
   s.license     = 'MIT'
 

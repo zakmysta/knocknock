@@ -28,7 +28,8 @@ module Knocknock
     end
 
     def auth_token
-      AuthToken.new payload: { sub: resource.access_tokens.create.token }
+      AuthToken.new payload: { sub: resource.access_tokens.create.token,
+                               resource_id: resource.id }
     end
 
     def auth_params
